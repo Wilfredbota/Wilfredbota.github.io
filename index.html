@@ -4,13 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BOTA.DEV</title>
-<style>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:#fff;font-family:system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-h1{font-size:clamp(36px,8vw,64px);font-weight:800;letter-spacing:-2px;line-height:0.9}
-.dot{color:#22c55e}
-.sub{color:#888;margin-top:16px}
-.badge{margin-top:20px;border:1px solid #222;padding:6px 14px;border-radius:100px;color:#888;font-size:12px}
+body{background:#000;color:#fff;font-family:system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,8vw,64px);font-weight:800;letter-spacing:-2px;line-height:0.9}
+.dot{color:#00ff88;text-shadow:0 0 25px #00ff88;animation:glow 2s infinite}
+@keyframes glow{0%,100%{filter:brightness(1)} 50%{filter:brightness(1.5)}}
+.sub{color:#888;margin-top:16px;letter-spacing:2px;font-size:14px;text-transform:uppercase}
+.badge{margin-top:20px;border:1px solid #222;padding:6px 14px;border-radius:999px;color:#888;font-size:12px}
+  </style>
 </style>
 </head>
 <body>
