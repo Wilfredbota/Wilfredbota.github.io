@@ -22,3 +22,53 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,8vw,64px);font-we
 <div class="badge">DAY 2 — VERCEL GLOW LIVE</div>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#000;color:#fff;font-family:'Space Grotesk',sans-serif;min-height:100vh;overflow-x:hidden;position:relative}
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);background-size:40px 40px;z-index:-1}
+.hero{text-align:center;padding:80px 20px 40px}
+.logo{font-size:14px;letter-spacing:4px;opacity:0.6;position:absolute;top:30px;left:30px;border:1px solid rgba(255,255,255,0.2);padding:8px 14px;border-radius:12px}
+h1{font-size: clamp(40px, 9vw, 110px);font-weight:700;line-height:0.9;margin:0;letter-spacing:-3px}
+.dot{color:#00ff88;text-shadow:0 0 25px #00ff88,0 0 50px #00ff88;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.4)}}
+.sub{margin-top:18px;font-size:16px;letter-spacing:1px;opacity:0.7;font-family:monospace}
+.badge{margin:22px auto 0;display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);padding:8px 18px;border-radius:999px;font-size:13px}
+.badge::before{content:'';width:8px;height:8px;background:#00ff88;border-radius:50%;box-shadow:0 0 10px #00ff88}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1100px;margin:50px auto;padding:0 20px}
+.card{background:linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:26px;text-align:left;backdrop-filter:blur(10px)}
+.card h3{margin:0 0 10px;font-size:22px;line-height:1.2}
+.card p{opacity:0.6;font-size:14px;line-height:1.5;font-family:monospace;margin:0 0 16px}
+.tag{display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);padding:4px 10px;border-radius:999px;font-size:11px;opacity:0.7}
+</style>
+</head>
+<body>
+<div class="logo">WB WILFRED BOTA</div>
+<div class="hero">
+<h1>WILFRED<br>BOTA<span class="dot">.DEV</span></h1>
+<p class="sub">Software Engineer • Building for the next billion • Kitwe → San Francisco</p>
+<div class="badge">Available for select projects — 2025</div>
+
+<div class="cards">
+<div class="card">
+<h3>Orbit<br>AI Dev Platform</h3>
+<p>Scalable LLM inference & tooling for modern apps. What Elon uses for xAI.</p>
+<span class="tag">TypeScript • Rust • Postgres</span>
+</div>
+<div class="card">
+<h3>VoltPay<br>Payments for Africa</h3>
+<p>Payments infrastructure built for mobile money & local rails. Solving trillion $ Africa problem.</p>
+<span class="tag">Next.js • Stripe • Mobile Money</span>
+</div>
+<div class="card">
+<h3>Nova<br>Real-time Analytics</h3>
+<p>Event-streaming analytics dashboard with sub-50ms latency. For global scale.</p>
+<span class="tag">Go • ClickHouse • WebSockets</span>
+</div>
+</div>
+</div>
+</body>
+</html>
