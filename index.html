@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BOTA.DEV - Wilfred Bota</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#000;color:#fff;font-family:'Space Grotesk',sans-serif;min-height:100vh}
-.logo{position:absolute;top:24px;left:24px;font-size:12px;letter-spacing:3px;opacity:0.6;border:1px solid rgba(255,255,255,0.2);padding:7px 12px;border-radius:10px}
-.hero{text-align:center;padding:90px 20px 50px}
-h1{font-size:clamp(42px,9vw,110px);font-weight:700;line-height:0.88;letter-spacing:-4px}
-.dot{color:#00ff88;text-shadow:0 0 20px #00ff88,0 0 50px #00ff88;animation:glow 2s infinite}
-@keyframes glow{0%,100%{filter:brightness(1)}50%{filter:brightness(1.5)}}
-.sub{margin-top:16px;font-size:14px;opacity:0.6;letter-spacing:1px;font-family:monospace}
-.badge{margin:22px auto 0;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);padding:8px 18px;border-radius:999px;font-size:13px}
+.logo{position:absolute;top:24px;left:24px;font-size:11px;letter-spacing:3px;opacity:.6;border:1px solid rgba(255,255,255,.2);padding:7px 12px;border-radius:10px}
+.hero{text-align:center;padding:90px 20px 40px}
+h1{font-size:clamp(42px,9vw,110px);font-weight:700;line-height:.88;letter-spacing:-4px}
+.dot{color:#00ff88;text-shadow:0 0 20px #00ff88,0 0 50px #00ff88;animation:g 2s infinite}
+@keyframes g{0%,100%{filter:brightness(1)}50%{filter:brightness(1.6)}}
+.sub{margin-top:14px;font-size:13px;opacity:.6;letter-spacing:1px;font-family:'JetBrains Mono',monospace}
+.badge{margin:20px auto 0;display:inline-flex;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:8px 18px;border-radius:999px;font-size:13px}
 .badge::before{content:'';width:8px;height:8px;background:#00ff88;border-radius:50%;box-shadow:0 0 10px #00ff88}
-.cards{max-width:1100px;margin:50px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;padding:0 20px;text-align:left}
-.card{background:linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.12);border-radius:18px;padding:26px;backdrop-filter:blur(10px)}
-.card h3{font-size:22px;margin-bottom:10px;line-height:1.1}
-.card p{font-size:13px;opacity:0.6;line-height:1.6;font-family:monospace;margin-bottom:16px}
-.tag{display:inline-block;font-size:10px;letter-spacing:0.5px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);padding:5px 10px;border-radius:999px;opacity:0.7}
+.cards{max-width:1100px;margin:45px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:20px;padding:0 20px;text-align:left}
+.card{background:linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px;backdrop-filter:blur(10px);transition:.3s}
+.card:hover{border-color:rgba(0,255,136,.4);transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,255,136,.15)}
+.card h3{font-size:20px;line-height:1.1;margin-bottom:8px}
+.card p{font-size:12px;opacity:.6;line-height:1.5;font-family:'JetBrains Mono',monospace;margin-bottom:12px}
+.tag{font-size:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);padding:5px 10px;border-radius:999px;opacity:.7}
+.live{margin-top:14px;background:#0a0a0a;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px}
+.live input,.live select{width:100%;background:#111;border:1px solid rgba(255,255,255,.15);color:#fff;padding:9px 11px;border-radius:8px;font-size:12px;font-family:'JetBrains Mono',monospace;outline:none;margin-bottom:8px}
+.live button{width:100%;background:#00ff88;color:#000;border:0;padding:9px;border-radius:8px;font-weight:700;cursor:pointer;font-size:12px}
+.live button:hover{background:#00cc6a}
+.out{margin-top:8px;font-size:11px;font-family:'JetBrains Mono',monospace;opacity:.9;min-height:18px;white-space:pre-wrap}
+canvas{width:100%;height:90px;display:block;background:#0a0a0a;border-radius:8px;margin-top:8px}
 </style>
 </head>
 <body>
@@ -28,12 +34,40 @@ h1{font-size:clamp(42px,9vw,110px);font-weight:700;line-height:0.88;letter-spaci
 <div class="hero">
 <h1>WILFRED<br>BOTA<span class="dot">.DEV</span></h1>
 <p class="sub">Software Engineer • Building for the next billion • Kitwe → San Francisco</p>
-<div class="badge">Available for select projects — 2025</div>
+<div class="badge">Live Demos — 2025 • All Systems Operational</div>
 <div class="cards">
-<div class="card"><h3>Orbit<br>AI Dev Platform</h3><p>Scalable LLM inference & tooling for modern apps. Infrastructure for the xAI era. Built for global scale.</p><span class="tag">TypeScript • Rust • Postgres • AI</span></div>
-<div class="card"><h3>VoltPay<br>Payments for Africa</h3><p>Payments infrastructure built for mobile money & local rails. Solving the $1T Africa commerce problem.</p><span class="tag">Next.js • Stripe • Mobile Money • Fintech</span></div>
-<div class="card"><h3>Nova<br>Real-time Analytics</h3><p>Event-streaming analytics with sub-50ms latency. Real-time data pipeline for trillion-row scale.</p><span class="tag">Go • ClickHouse • WebSockets • Scale</span></div>
+
+<div class="card"><h3>Orbit<br>AI Dev Platform</h3><p>Scalable LLM inference & tooling. Ask anything.</p><span class="tag">TypeScript • Rust • Postgres • AI</span>
+<div class="live"><input id="q" placeholder="Ask Orbit: e.g. Explain Zambian fintech..."><button onclick="orbit()">▶ Run Inference</button><div id="orbitOut" class="out"></div></div></div>
+
+<div class="card"><h3>VoltPay<br>Payments for Africa</h3><p>Mobile money rails. Simulate a payment.</p><span class="tag">Next.js • Stripe • Mobile Money • Fintech</span>
+<div class="live"><select id="net"><option>Airtel Money Zambia</option><option>MTN MoMo</option><option>Zamtel Kwacha</option></select><input id="amt" type="number" placeholder="Amount ZMW — e.g. 250"><button onclick="pay()">Pay Now</button><div id="payOut" class="out"></div></div></div>
+
+<div class="card"><h3>Nova<br>Real-time Analytics</h3><p>Sub-50ms event streaming. Live pipeline.</p><span class="tag">Go • ClickHouse • WebSockets • Scale</span>
+<div class="live"><div style="font-size:11px;opacity:.6">Events/sec: <span id="eps">0</span> • Latency: <span id="lat">0ms</span></div><canvas id="chart"></canvas><button onclick="burst()">Trigger Burst</button></div></div>
+
 </div>
 </div>
+<script>
+// Orbit - fake streaming AI
+function orbit(){
+ let q=document.getElementById('q').value||'Build for the next billion';
+ let out=document.getElementById('orbitOut'); out.textContent='⚡ Inferencing...';
+ let resp=`> Query: "${q}"\n> Model: Orbit-1.2 (4B params, 128k ctx)\n> \nThis is a scalable LLM inference demo built by Wilfred in Kitwe. For "${q}", Orbit would use Rust + PGVector + streaming. In production: < 300ms TTFT, Zambia → global edge. BOTA.DEV is ready for xAI era.`;
+ let i=0; out.textContent=''; let iv=setInterval(()=>{out.textContent+=resp[i++]||''; if(i>=resp.length) clearInterval(iv)},12);
+}
+// VoltPay
+function pay(){
+ let net=document.getElementById('net').value, amt=document.getElementById('amt').value||'100', out=document.getElementById('payOut');
+ out.textContent=`Initiating ${amt} ZMW via ${net}...\n→ Checking mobile money rail... ✓\n→ Encrypting payload... ✓`;
+ setTimeout(()=>{out.textContent+=`\n→ Settlement: SUCCESS\n✓ ${amt} ZMW paid via ${net}\n✓ TxID: VP-${Date.now().toString().slice(-6)}-ZM\n✓ BOTA.DEV rails operational`;},900);
+}
+// Nova chart
+let c=document.getElementById('chart'), ctx=c.getContext('2d'), data=Array(60).fill(20);
+function draw(){ c.width=c.offsetWidth*2; c.height=90*2; ctx.clearRect(0,0,c.width,c.height); ctx.strokeStyle='#00ff88'; ctx.lineWidth=2; ctx.beginPath(); data.forEach((v,i)=>{let x=i/c.width*c.width*2*(c.width/60), y=c.height - v*1.8; if(i==0) ctx.moveTo(x,y); else ctx.lineTo(x,y)}); ctx.stroke(); ctx.fillStyle='rgba(0,255,136,0.15)'; ctx.lineTo(c.width,c.height); ctx.lineTo(0,c.height); ctx.closePath(); ctx.fill(); }
+setInterval(()=>{ let v=20+Math.random()*60+Math.sin(Date.now()/500)*20; data.push(v); data.shift(); document.getElementById('eps').textContent=Math.floor(v*12); document.getElementById('lat').textContent=(20+Math.random()*25).toFixed(0)+'ms'; draw(); },80);
+function burst(){ for(let i=0;i<10;i++) data.push(90+Math.random()*30); }
+draw();
+</script>
 </body>
 </html>
